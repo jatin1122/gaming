@@ -1,0 +1,27 @@
+image: registry.gitlab.com/
+
+stages:
+  - deploy
+
+# Cache vendor and node_modules between builds
+# cache:
+#   paths:
+#     - vendor/
+#     - node_modules/
+
+variables:
+  GIT_DEPTH: "4"
+
+# Setup our deployment key
+before_script:
+  - mkdir -p ~/.ssh
+  - (umask  077 ; echo $DEPLOY_KEY | base64 --decode -i > ~/.ssh/deploy.pem)
+  - (umask  077 ; echo $COMPOSER_AUTH_JSON | base64 --decode -i > ~/.composer/auth.json)
+
+deploy:
+  stage: deploy
+  script:
+    - dep deploy ${CI_COMMIT_REF_NAME}
+  only:
+    - testing
+    - production

@@ -1,0 +1,340 @@
+.home-page {
+    font-family: $title_font;
+    line-height: 1.62;
+    font-size: 18px;
+    h1,h2,h3 {
+        margin: 0;
+    }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        @media screen and (min-width: $md){
+            font-size: 18px;
+        }
+    }
+    p strong {
+        font-weight: 600;
+    }
+}
+
+.home-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/main-background.jpg');
+    position: relative;
+}
+
+.home-login-button {
+    position: absolute;
+    color: $white;
+    top: 35px;
+    right: 15px;
+    @media screen and (min-width: $md){
+        top: 30px; right: 30px;   
+    }
+    &:hover {
+        color: $primary_color;
+    }
+    svg {
+        width: 48px;
+        height: 48px;
+        @media screen and (min-width: $md){
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.home-hero__content {
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 0 15px;
+    color: $white;
+    text-align: center;
+    .logo { //actually the logo
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 44px;
+        line-height: 2;
+        img {
+            display: inline-block;
+            max-width: calc(100% - 210px);
+            min-width: 200px;
+            height: auto;
+            @media screen and (min-width: $md){
+                width: 550px;
+            }
+        }
+    }
+    .btn {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 2.3em;
+    }
+    h2 {
+        padding-bottom: 90px;
+        position: relative;
+        font-weight: 700;
+        font-size: 1em;
+        @media screen and (min-width: $md){
+            font-size: 1.5em;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-right: 1px solid $white;
+            border-bottom: 1px solid $white;
+            transform: translateY(-33.33%) rotate(45deg);
+            bottom: 30px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+}
+
+.home-game-tile {
+    color: $white;
+    @media screen and (min-width: $md){
+        display: flex;
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+
+
+.home-game__content {
+    padding: 60px 30px;
+    @media screen and (min-width: $md){
+        width: 50%;
+    }
+    > div {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+        h3 img {
+            max-height: 125px;
+            max-width: 300px;
+        }
+        img {
+            display: inline-block;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+}
+
+.home-game__platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    svg {
+        height: 60px;
+        width: auto;
+        fill: $white;
+    }
+    svg:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+.home-game__availability {
+    font-size: 28px;
+    font-weight: bold;    
+}
+
+.home-game__availability--available {
+    margin-top: 15px;
+}
+.home-game__availability--comingsoon {
+    margin-top: -50px;
+}
+
+.home-game__platforms--comingsoon svg {
+    fill: rgba(255,255,255,0.4);
+}
+
+.home-game__swiper-container {
+    position: relative;
+    height: 350px;
+    @media screen and (min-width: $md){
+        height: auto;
+        min-height: 350px;
+        width: 50%;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.swiper-wrapper.disabled {
+    //Yes, this is only of the scenarios !important is allowed.
+    transform: translate3d(0px, 0, 0) !important; 
+}
+
+.home-game-tile--reverse {
+
+}
+
+.home-hero-kids {
+    background-color: $secondary_color_dark;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/other-background.jpg');
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.home-footer {
+    background-color: $secondary_color_dark;
+    background-color: $secondary_color_dark;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/other-background.jpg');    
+    padding-top: 60px;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    color: $white;
+    padding: 60px 15px;
+}
+
+.home-footer-text {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 32px;
+    }
+    a {
+        font-size: 18px;
+        color: $primary_color;
+        text-decoration: none;
+        font-weight: 600;
+        @media screen and (min-width: $sm){
+            font-size: 28px;
+        }
+    }
+}
+
+.top {
+
+    padding-top: 50px;
+    position: relative;
+    
+    a {
+        font-weight: normal;
+        font-size: 18px;
+        color: white;
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-right: 1px solid $white;
+        border-bottom: 1px solid $white;
+        transform: translateY(-33.33%) rotate(-135deg);
+        top: 35px;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    
+}
+
+
+.site-footer {
+    background-color: #19191c;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    @media screen and (min-width: $md){
+        display: flex;
+        text-align: left;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (min-width: $md){
+            justify-content: flex-start;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            margin-right: 15px;
+            padding-right: 15px;
+            font-size: 16px;
+            position: relative;
+            &:not(:last-child) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0; top: 0; bottom: 0;
+                    background-color: $white;
+                    width: 1px;
+                    height: 100%;
+                }
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.footer-social {
+    .facebook {
+        fill: #3b5998;
+    }
+    .instagram {
+        fill: #e1306c;
+    }
+    .twitter {
+        fill: #1da1f2;
+    }
+    a {
+        margin-right: 15px;
+        text-decoration: none;
+        fill: $white;
+        &:hover {
+            fill: white;
+        }
+    }
+}

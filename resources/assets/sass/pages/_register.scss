@@ -1,0 +1,93 @@
+.register-container {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 50px 20px;
+    position: relative;
+    margin-bottom: 45px;
+    @media screen and (min-width: $md){
+        padding: 30px 60px;
+    }
+    @media screen and (min-width: $lg){
+        padding: 30px 100px 60px;
+    }
+}
+
+.register-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto;
+        width: 2px;
+        height: 60%;
+        background-color: $secondary_color;
+    }
+    &::after {
+        transform: rotate(45deg);
+    }
+    &::before {
+        transform: rotate(135deg);
+    }
+    @media (-moz-touch-enabled: 0), (pointer: fine) {
+        &:hover {
+            &::before,
+            &::after {
+                background-color: $secondary_color_light;
+            }
+        }
+    }
+}
+
+
+
+.register-container {
+    h1 {
+        @include font(24, 38);
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    h2 {
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        @include font(16);
+        @media screen and (min-width: $lg){
+            margin-bottom: 45px;
+        }
+        > span {
+            display: inline-block;
+            background-color: $white;
+            position: relative;
+            z-index: 1;
+            padding: 0 30px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0;  left: 0; right : 0;
+            margin: auto;
+            height: 2px;
+            width: 100%;
+            background-color: $border_color;
+        }
+    }
+
+    p {
+        text-align: center;
+        @include font(16, 32);
+        margin-bottom: 30px;
+        strong {
+            color: $error_color;
+        }
+    }
+}

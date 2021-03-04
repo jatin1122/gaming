@@ -1,0 +1,52 @@
+.dashboard {
+    color: $white;
+}
+
+.dashboard-portal {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    @media screen and (min-width: $md){
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.dashboard-portal__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    flex-direction: column;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 4px;
+    margin: auto;
+    text-decoration: none;
+    margin-bottom: 30px;
+    @media screen and (min-width: $md){
+        width: 180px;
+        height: 180px;
+    }
+    @media (-moz-touch-enabled: 0), (pointer: fine) {
+        &:hover {
+            background-color: $white;
+            color: $secondary_color;
+            svg {
+                fill: $secondary_color;
+            }
+        }
+    }
+    svg {
+        margin-bottom: 5px;
+        width: 100%;
+        height: auto;
+        max-width: 35%;
+        max-height: 35%;
+        fill: $white;
+    }
+}

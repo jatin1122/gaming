@@ -1,0 +1,102 @@
+.history-card-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.history-card {
+    background-color: $white;
+    position: relative;
+    font-size: 14px;
+    @media screen and (min-width: $sm){
+        font-size: 16px;
+    }
+    @media screen and (min-width: $md){
+        font-size: 18px;
+    }
+    @media screen and (min-width: $lg){
+        font-size: 20px;
+    }
+}
+
+.history-card__header {
+    @include button_reset();
+    &:focus {
+        outline: none;
+    }
+    width: 100%;
+    border-bottom: 1px solid $secondary_color_light;
+    margin-bottom: 1em;
+    padding: 0.8em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.is-active {
+        .history-card__arrow {
+            transform: translateY(32%) translateX(-22%) rotate(225deg);
+        }
+    }
+}
+.history-card__month {
+    color: $primary_color;
+    font-weight: bold;
+    font-size: 1em;
+    small {
+        color: #9B9B9B;
+        font-size: 0.5em;
+        vertical-align: top;
+    }
+}
+.history-card__arrow {
+    transform: translateY(-32%) translateX(-22%) rotate(45deg);
+    border-bottom: 0.15em solid $primary_color;
+    border-right: 0.15em solid $primary_color;
+    width: 1em;
+    height: 1em;
+    transition: .15s ease-in-out;
+}
+.history-card__panel {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $secondary_color_light;
+    margin-bottom: 15px;
+}
+.history-card__item {
+    color: $secondary_color;
+    display: grid;
+    grid-template: 
+        "type price" 
+        "date price"
+    ;
+    padding: 0.5em;
+    &:nth-child(odd) {
+        background-color: $secondary_color_light;
+    }
+}
+.history-card__type {
+    grid-area: type;
+    font-size: 0.8471em;
+    text-transform: capitalize;
+}
+.history-card__date {
+    grid-area: date;
+    font-size: 0.7em;
+    color: #9B9B9B;
+    margin-top: .4em;
+
+}
+.history-card__price {
+    font-weight: bold;
+    grid-area: price;
+    font-size: 1em;
+    justify-self: flex-end;
+    align-self: center;
+
+}
+.history-card__price--plus {
+    color: $success_color;
+}
+.history-card__price--minus {
+    color: $error_color;
+}

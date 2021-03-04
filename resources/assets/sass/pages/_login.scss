@@ -1,0 +1,101 @@
+.login-container {
+    color: $white;
+    @media screen and (min-width: $lg){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (min-width: $xl){
+        margin-top: 200px;
+    }
+    
+}
+
+.otp-validate {
+    margin-top: 50px;
+    a {
+        color: white;
+        margin-top: 10px;
+    }
+
+    .text-center {
+        margin-top: 10px;
+    }
+}
+
+.otp-container__panel {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    @media screen and (min-width: $sm){
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: $lg){
+        width: 50%;
+        padding: 0 30px;
+    }
+    @media screen and (min-width: $xl){
+        padding: 0 90px;
+    }
+
+    h1, h2 {
+        @include font(20, 32);
+        text-align: center;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        margin-bottom: 60px;
+    }
+}
+
+
+.login-container__panel {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    @media screen and (min-width: $sm){
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+    &:first-child {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $border_color;
+        }
+    }
+    @media screen and (min-width: $lg){
+        width: 50%;
+        padding: 0 30px;
+        &:first-child {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: initial;
+                height: 100%;
+                width: 2px;
+                background-color: $border_color;
+            }
+        }
+    }
+    @media screen and (min-width: $xl){
+        padding: 0 90px;
+    }
+
+    h1, h2 {
+        @include font(20, 32);
+        text-align: center;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        margin-bottom: 60px;
+    }
+}

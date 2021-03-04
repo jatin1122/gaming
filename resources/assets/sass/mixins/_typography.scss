@@ -1,0 +1,24 @@
+$browser-context: 16;
+
+@function get-line-height($font-size, $line-height) {
+    @return $line-height / $font-size;
+}
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+}
+
+@mixin font($font-size, $line-height: null, $context: $browser-context) {
+    font-size: em($font-size, $context);
+    @if ($line-height) {
+        line-height: get-line-height($font-size, $line-height);
+    }
+}

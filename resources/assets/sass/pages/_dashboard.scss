@@ -1,0 +1,44 @@
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.dashboard-header__profile {
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template: "image welcome" "image balance";
+    grid-template-columns: 80px;
+    grid-column-gap: 30px;
+    grid-template-rows: auto;
+    line-height: 41px;
+    padding: 0 15px;
+}
+
+.dashboard-header__image {
+    grid-area: image;
+    img {
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+}
+
+.dashboard-header__welcome {
+    grid-area: welcome;
+    text-align: left;
+    line-height: 1;
+}
+
+.dashboard-header__balance {
+    text-align: left;
+    grid-area: balance;
+    color: $white;
+    font-size: 23px;
+    strong {
+        color: #4ab4e2;
+    }
+}

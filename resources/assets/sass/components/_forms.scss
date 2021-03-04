@@ -1,0 +1,60 @@
+.form-group {
+    margin-bottom: 30px;
+}
+
+.error-label {
+    display: block;
+    background-color: lighten($error_color, 50%);
+    border: 1px solid $error_color;
+    color: $error_color;
+    padding: 10px;
+}
+
+
+.form-control {
+    line-height: 40px;
+    min-height: 40px;
+    width: 100%;
+    color: $secondary_color;
+    background-color: $white;
+    border: 2px solid $border_color;
+    border-radius: 5px;
+    padding: 0 12px;
+    &:focus {
+        box-shadow: 0 0 0 3px $success_color;
+    }
+}
+
+.label-control {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.card-security {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+}
+
+
+.card-security__expiry {
+    display: flex;
+    flex-wrap: wrap;
+    .input {
+        margin-right: 15px;
+    }
+}
+
+.card-security__month {
+
+}
+.card-security__year {
+
+}
+.card-security__cvc {
+    @media screen and (min-width: $lg){
+        margin-left: auto;
+    }
+}

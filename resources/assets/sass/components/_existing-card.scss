@@ -1,0 +1,111 @@
+.existing-card-radio {
+    width: 100%;
+    input {
+        position: absolute; 
+        overflow: hidden; 
+        clip: rect(0 0 0 0); 
+        height: 1px; width: 1px; 
+        margin: -1px; padding: 0; border: 0; 
+    }
+    input + label {
+        position: relative;
+        display: flex;
+        border: 2px solid transparent;
+        padding:  5px 15px;
+        min-height: 64px;
+        align-items: center;
+        background-color: $secondary_color_light;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        padding-left: 40px;
+        @media screen and (min-width: $sm){
+            padding-left: 60px;
+        }
+        @media (-moz-touch-enabled: 0), (pointer: fine) {
+            &:hover {
+                border-color: #77c414;
+                background-color: lighten($secondary_color_light, 10%);
+                .existing-card-radio__marker {
+                    border-color: #77c414;
+                }
+            }
+        }
+    }
+    input:checked + label {
+        position: relative;
+        display: flex;
+        border-color: #77c414;
+        background-color: $white;
+        border-color: #77c414;
+        .existing-card-radio__marker {
+            background-color: #77c414;
+            border-color: transparent;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+.existing-card-radio__marker {
+    position: absolute;
+    top: 0; bottom: 0;
+    margin: auto;
+    border: 2px solid lighten($secondary_color, 20%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto;
+        width: 60%;
+        height: 20%;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        transform: rotate(-45deg);
+        opacity: 0;
+    }
+    @media screen and (min-width: $sm){
+        left: 15px;
+        width: 30px;
+        height: 30px;
+    }
+}
+.existing-card-radio__brand {
+    border: 1px solid lighten($secondary_color, 20%);
+    max-width: 45px;
+    @media screen and (min-width: $sm){
+        max-width: 60px;
+    }
+}
+
+.existing-card-radio__info {
+    padding-left: 15px;
+}
+.existing-card-radio__name {
+    text-transform: uppercase;
+}
+.existing-card-radio__digets {
+    &::before {
+        content: "\2022\2022\2022\2022 \2022\2022\2022\2022 \2022\2022\2022\2022 "
+    }
+}
+.existing-card-radio__expiry {
+    text-align: right;
+    color: lighten($secondary_color, 20%);
+    margin-left: auto;
+    line-height: 1.8;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    svg {
+        display: block;
+        pointer-events: none;
+    }
+}

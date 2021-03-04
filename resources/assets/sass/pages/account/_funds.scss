@@ -1,0 +1,42 @@
+.fund-icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fund-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    fill: $white;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 6px;
+    user-select: none;
+    @media screen and (min-width: $md){
+        width: 40%;
+        svg {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.fund-icon--primary {
+    background-color: $primary_color;
+    &:hover {
+        background-color: lighten($primary_color, 11%);
+    }
+}
+
+.fund-icon--secondary {
+    background-color: $secondary_color;
+    &:hover {
+        background-color: lighten($secondary_color, 11%);
+    }
+}

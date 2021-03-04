@@ -1,0 +1,59 @@
+@mixin button_reset() {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background-color: none;
+    -webkit-appearance: none; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: inline-block;
+}
+
+@mixin make_button($name, $color1, $color2, $makeSolid) {
+    .btn-#{$name} {
+        color: $color1;
+        border-color: $color1;
+        @media (-moz-touch-enabled: 0), (pointer: fine) {
+            &:hover {
+                border-color: $color1;
+                background-color: $color1;
+                color: $color2;
+            }
+        }
+        &.is-active,
+        &:focus,
+        &:active {
+            background-color: $color1;
+            color: $color2;
+        }
+    }
+
+    @if $makeSolid {
+        .btn-#{$name}-solid {
+            color: $color2;
+            background-color: $color1;
+            border-color: $color1;
+            @media (-moz-touch-enabled: 0), (pointer: fine) {
+                &:hover {
+                    // border-color: $color1;
+                    background-color: lighten($color1, 15%);
+                    color: $color2;
+                }
+            }
+            &.is-active,
+            &:focus,
+            &:active {
+                background-color: lighten($color1, 15%);
+                color: $color2;
+            }
+        }
+    }
+}

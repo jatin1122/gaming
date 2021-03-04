@@ -1,0 +1,17 @@
+<svg id="account" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H29.988V29.988H0Z" transform="translate(0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Rectangle_2_Copy_3" data-name="Rectangle 2 Copy 3" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1">
+    <rect width="60" height="60" rx="4" stroke="none"/>
+    <rect x="0.5" y="0.5" width="59" height="59" rx="3.5" fill="none"/>
+  </g>
+  <g id="Group_3_Copy" data-name="Group 3 Copy" transform="translate(15 15)">
+    <path id="Clip_2-2" data-name="Clip 2" d="M0,0H29.988V29.988H0Z" transform="translate(0)" fill="none"/>
+    <g id="Group_3_Copy-2" data-name="Group 3 Copy" clip-path="url(#clip-path)">
+      <path id="Fill_1" data-name="Fill 1" d="M14.994,29.988a14.993,14.993,0,0,1-10.6-25.6A14.993,14.993,0,1,1,25.6,25.6,14.892,14.892,0,0,1,14.994,29.988Zm0-10.39a9.382,9.382,0,0,1,8.691,5.846,13.592,13.592,0,1,0-17.384,0A9.384,9.384,0,0,1,14.994,19.6Zm0-.881a5.453,5.453,0,1,1,5.452-5.453A5.459,5.459,0,0,1,14.994,18.717Z" transform="translate(0 0)" fill="currentColor"/>
+    </g>
+  </g>
+</svg>
